@@ -1,0 +1,18 @@
+<?php if (!$this->form->isSubForm()): ?>
+<form method="<?php echo $this->form->getMethod(); ?>" action="<?php echo $this->form->getAction(); ?>">
+<?php endif; ?>
+    
+<?php if ($this->legend): ?>
+    <legend><?php echo $this->legend; ?></legend>
+<?php endif; ?>
+
+<?php foreach ($this->form as $element): ?>
+<?php echo $this->partial($this->form->getViewScript('controlGroup'), $element) ?>
+<?php endforeach; ?>
+    
+<?php if (!$this->form->isSubForm()): ?>
+    <div class="controls">
+        <button type="submit" class="btn"><?php echo $this->translate('submit')?></button>
+    </div>
+</form>
+<?php endif; ?>

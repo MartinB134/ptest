@@ -1,0 +1,20 @@
+<h2>
+    <?php echo $this->translate('project') ?> "<?php echo $this->e($this->project->title) ?>"
+    <a
+    class="btn" 
+    href="<?php echo $this->url(array('action' => 'edit')); ?>">
+    <i class="icon-pencil"></i> <?php echo $this->translate('project_edit') ?></a>
+    <a 
+    class="btn pull-right" 
+    href="<?php echo $this->url(array('action' => 'delete')); ?>"
+    title="<?php echo $this->translate('project_delete') ?>"
+    onclick="return confirm('<?php echo $this->translate('project_delete_confirm') ?>');">
+        <i class="icon-trash" ></i>
+    </a>
+</h2>
+<h3>Issues</h3>
+<div class="well">
+    <a href="">Issue 1</a>
+    <a class="btn pull-right" href="" title="..."><i class="icon-trash"></i></a> 
+    <a class="btn pull-right" href="" title="..."><i class="icon-pencil"></i></a> 
+</div>

@@ -1,0 +1,7 @@
+<label><?php echo $this->translate($this->label); ?></label>
+<input 
+    type="text" 
+    name="<?php echo $this->form->prefix($this->name) ?>" 
+    value="<?php echo $this->e($this->value) ?>"
+    <?php if ($this->placeholder) echo 'placeholder="'.$this->translate($this->placeholder).'"' ?>
+    />

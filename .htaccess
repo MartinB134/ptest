@@ -1,0 +1,16 @@
+### Begin: Rewrite stuff ###
+
+# Enable URL rewriting
+RewriteEngine On
+
+# If the file/symlink/directory does not exist => Redirect to index.php
+# Important note: If you copy/paste this into httpd.conf instead
+# of .htaccess you will need to add '%{DOCUMENT_ROOT}' left to each
+# '%{REQUEST_FILENAME}' part.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule .* index.php [L]
+
+### End: Rewrite stuff ###

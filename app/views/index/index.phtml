@@ -1,0 +1,36 @@
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit">
+    <h2>Hi there!</h2>
+    <p>What a pity: A colleague just got ill and left you and your colleagues with this unfinished issue tracking system that you need for your collaboration. Now you will have to just make the issue feature work...</p>
+</div>
+
+<h3>Your task</h3>
+<h4>Implement the issue feature</h4>
+<p>Your team wants to create issues for each project which will be listed inside the <a href="<?php echo $this->url(array('controller' => 'projects', 'action' => 'show', 'project' => 1)); ?>">projects</a>:</p>
+<ol>
+    <li>Implement <b>creating issues</b> - each issue should be bound to a project and have a type (Task, Bug or Improvement), status (Open, In Progress, Closed), title and description.</li>
+    <li>Show the projects <b>issues list</b> in the projects detail</li>
+    <li>Make <b>editing issues</b> work</li>
+    <li>Implement <b>deleting issues</b> - the user should confirm if really wants to delete the issue</li>
+    <li>Add the authentication functionality including login, logout against a user table (without administration)</li>
+</ol>
+
+<h4>Not challenged?</h4>
+<p>You've finished the above task and want to show more? Then you could make <code>\Frmwrk\Model::delete()</code> also delete the rows of related tables (<code>hasOne</code>, <code>hasMany</code>)</p>
+
+<h3>Some tipps on how to get through the test</h3>
+<ul>
+    <li>The frontend stuff is based on <b>twitter bootstrap</b> so you shouldn't need to write any CSS - just have a look at the <a href="http://twitter.github.io/bootstrap/index.html" target="_blank">documentation</a></li>
+    <li><b>Feel free</b> to change anything on the existing code</li>
+    <li><b>Don't forget</b> to send us your database - dump your database (including the data) into the db.sql file inside the root of this project and send it to us.</li>
+    <li>
+        <p><acronym title="In terms of: &quot;you really don't have to&quot;">Feel free</acronym> to work with <b>git</b> - after you installed the application, change into it's root and run</p> 
+        <pre>$ git --bare init</pre>
+        <p>Then, when working on the test, commit to your local repository as you're used to and after you finished, run</p>
+        <pre>$ git bundle create ptest.bundle master</pre>
+        <p>and send us the <b>ptest.bundle</b>.</p>
+    </li>
+</ul>
+<div class="alert alert-info">
+    As we know that you're probably doing this beside other jobs, we won't judge you just for the amount - the quality and your approach are more important.
+</div>

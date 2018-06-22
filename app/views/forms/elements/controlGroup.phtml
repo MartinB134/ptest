@@ -1,0 +1,12 @@
+<div class="control-group<?php if ($this->isValid === false) echo " error" ?>">
+<?php echo $this->render($this->form->getViewScript($this->type)) ?>
+<?php if ($this->isValid === false): ?>
+    <?php foreach ($this->validator->getErrorCodes() as $validation => $codes): ?>
+    <?php foreach ($codes as $code): ?>
+        <span class="help-inline">
+            <?php echo $this->translate('error_'.$validation.($code ? '_'.$code : '')) ?>
+        </span>
+    <?php endforeach;?>
+    <?php endforeach; ?>
+<?php endif; ?>
+</div>
